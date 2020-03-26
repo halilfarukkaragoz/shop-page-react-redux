@@ -7,12 +7,12 @@ export default function DisplayBasketProducts(props) {
     console.log(props)
     return (
         <div >
-            <div class="card" style={{width: "60rem",backgroundColor :"lightgray", margin : "auto"}}>
+            <div  style={{width: "49rem", margin : "auto"}}>
             <img style = {{display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"}} src= {props.photo} alt="Smiley face" height="333" width="333"/>
                 <div class="card-body">
-                    <h5 class="card-title"><p style = {{fontSize : 30,textAlign : "center"}} >{props.title} </p></h5>
-                    {props.numberArray[props.index]}
-                    <button onClick = {()=> dispatch(removeStuff(props.index))} > remove </button>
+                    <h5 class="card-title"><p style = {{fontSize : 30,textAlign : "center"}} >{props.title} - {props.numberArray[props.index]} </p></h5>
+    
+                    <button class="btn btn-secondary" onClick = {()=> dispatch(removeStuff(props.index))} style = {{display: "block", marginLeft: "auto", marginRight: "auto", width: 110}} > remove </button>
                 </div>
             </div>
         </div>

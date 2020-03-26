@@ -32,7 +32,7 @@ import BasketPage from "./Components/BasketPage"
       <div>
        
           <Header  openBasketPage = {this.openBasketPage} openMainPage = {this.openMainPage} />
-          { this.state.basketPageVissible && <BasketPage/>}
+          { this.state.basketPageVissible && <BasketPage openBasketPage = {this.openBasketPage} openMainPage = {this.openMainPage} />}
           { this.state.mainPageVissible &&  <Products/>}
         
       </div>

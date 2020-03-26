@@ -5,16 +5,24 @@ export default function DisplayProducts(props) {
     const dispatch = useDispatch()
  
     return (
-        <div >
-            <div class="card" style={{width: "60rem",backgroundColor :"lightgray", margin : "auto"}}>
-            <img style = {{display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"}} src= {props.photo} alt="Smiley face" height="333" width="333"/>
-                <div class="card-body">
-                    <h5 class="card-title"><p style = {{fontSize : 30,textAlign : "center"}} >{props.title} </p></h5>
-                    <p class="card-text"><button onClick = {() => dispatch(addStuff(props.index)) } type="button" class="btn btn-info" style = {{marginLeft : 200}}>Add Basket</button></p>
+        <div>
+            <br/>
+            <div class="card mb-3" style ={{backgroundColor : "gray"}}>
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src = {props.photo} class="card-img" alt="..."/>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{props.brand}</h5>
+                            <p class="card-text">{props.title}</p>
+                            <button onClick = { () => dispatch(addStuff(props.index))} style = {{width : "15%" }} class = "btn btn-dark">Buy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            
+
     )
 }
   
