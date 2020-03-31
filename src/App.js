@@ -31,9 +31,9 @@ import BasketPage from "./Components/BasketPage"
       <Provider store = {CreateStore}>
       <div>
        
-          <Header  openBasketPage = {this.openBasketPage} openMainPage = {this.openMainPage} />
+          <Header  openBasketPage = {this.openBasketPage} openMainPage = {this.openMainPage}  />
           { this.state.basketPageVissible && <BasketPage openBasketPage = {this.openBasketPage} openMainPage = {this.openMainPage} />}
-          { this.state.mainPageVissible &&  <Products/>}
+          { this.state.mainPageVissible &&  <Products openBasketPage = {this.openBasketPage} />}
         
       </div>
       </Provider>
